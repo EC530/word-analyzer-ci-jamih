@@ -1,3 +1,7 @@
+from matplotlib import pyplot as plt
+import numpy as np
+
+
 f = open("sample.txt", "r")
 #print(f.read())
 
@@ -31,3 +35,14 @@ for line in f:
 # Print the contents of dictionary
 for key in list(d.keys()):
     print(key, ":", d[key])
+
+
+# Creating dataset
+a = np.array([1,5,6,50,60,20])
+ 
+# Creating histogram
+fig, ax = plt.subplots(figsize =(10, 7))
+ax.hist(a, bins = [0, 25, 50, 75, 100])
+ 
+# Show plot
+plt.show()
