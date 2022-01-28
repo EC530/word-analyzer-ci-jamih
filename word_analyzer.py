@@ -40,7 +40,7 @@ for line in f:
 for key in list(d.keys()):
     print(key, ":", d[key])
 
-
+'''
 # Creating dataset
 a = np.array([1,5,6,50,60,20])
  
@@ -50,3 +50,4 @@ ax.hist(a, bins = [0, 25, 50, 75, 100])
  
 # Show plot
 plt.show()
+'''
