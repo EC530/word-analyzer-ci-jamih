@@ -2,6 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import re
 
+
 def count_words(n):
     f = open(n, "r")
     #print(f.read())
@@ -40,15 +41,17 @@ def count_words(n):
     for key in list(d.keys()):
         print(key, ":", d[key])
 
-    return d
+
+    #return d
 
 def main():
     count_words('poem.txt')
-    return
 
 
 
-
+if __name__ == '__main__':
+    main()
+    
 
 
 
