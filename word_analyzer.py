@@ -42,7 +42,7 @@ def count_words(n):
         print(key, ":", d[key])
 
 
-    #return d
+    return d
 
 def main():
     count_words('poem.txt')
