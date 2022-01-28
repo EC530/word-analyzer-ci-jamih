@@ -43,7 +43,7 @@ def count_words(n):
     return d
 
 def main():
-    count_words(poem.txt)
+    count_words('poem.txt')
     return
 
 
