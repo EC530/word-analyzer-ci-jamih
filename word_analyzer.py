@@ -62,6 +62,13 @@ def count_words(n):
     plt.ylabel('Word Frequency')
     plt.title('Word Frequency in Poem')
 
+    plt.xticks(
+    rotation=45, 
+    horizontalalignment='right',
+    fontweight='light',
+    fontsize='small'  
+)
+
 
     plt.show()
 
