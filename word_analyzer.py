@@ -4,12 +4,19 @@ import re
 
 
 def count_words(n):
+
     f = open(n, "r")
     #print(f.read())
 
     # Create an empty dictionary
     d = dict()
-    
+
+    # Create an empty array for words 
+    words = []
+
+    # Create an empty array for frequency of words
+    freq = []
+
     # Loop through each line of the file
     for line in f:
         
@@ -40,12 +47,29 @@ def count_words(n):
     # Print the contents of dictionary
     for key in list(d.keys()):
         print(key, ":", d[key])
+        words.append(key)
+        freq.append(d[key])
+    
 
+    print(words)
+    print(freq)
+
+    # Creating Histogram from data
+
+    width = 1.5
+    plt.bar(words,freq, width)
+    plt.xlabel('Word')
+    plt.ylabel('Word Frequency')
+    plt.title('Word Frequency in Poem')
+
+
+    plt.show()
 
     return d
 
 def main():
     count_words('poem.txt')
+    
 
 
 
@@ -53,16 +77,3 @@ if __name__ == '__main__':
     main()
     
 
-
-
-'''
-# Creating dataset
-a = np.array([1,5,6,50,60,20])
- 
-# Creating histogram
-fig, ax = plt.subplots(figsize =(10, 7))
-ax.hist(a, bins = [0, 25, 50, 75, 100])
- 
-# Show plot
-plt.show()
-'''
