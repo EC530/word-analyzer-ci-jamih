@@ -5,7 +5,7 @@ import re
 
 # Function for reading words from text file
 # And displaying word frequency in histogram
-def count_words(n):
+def txt_count_words(n):
 
     f = open(n, "r")
     #print(f.read())
@@ -69,8 +69,11 @@ def count_words(n):
 
     return d
 
+
+
+
 def main():
-    count_words('poem.txt')
+    txt_count_words('poem.txt')
     
     
 if __name__ == '__main__':

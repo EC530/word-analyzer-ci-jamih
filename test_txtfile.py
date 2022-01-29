@@ -6,5 +6,5 @@ dict = {'THE': 1, 'WOODS': 1, 'ARE': 1, 'LOVELY': 1, 'DARK': 1, 'AND': 3, 'DEEP'
 def test_word_count():
     '''word_analyzer should give known result with known input'''
 
-    result = word_analyzer.count_words('poem.txt')
+    result = word_analyzer.txt_count_words('poem.txt')
     assert dict == result
