@@ -3,6 +3,8 @@ import numpy as np
 import re
 
 
+# Function for reading words from text file
+# And displaying word frequency in histogram
 def count_words(n):
 
     f = open(n, "r")
@@ -24,13 +26,7 @@ def count_words(n):
         # Convert the characters in line to uppercase
         # to avoid case mismatch
         line = line.upper()
-        '''
-        # Remove the leading and trailing spaces
-        line = line.strip()
-    
-        # Split the line into a list of words
-        words = line.split(" ")
-        '''
+      
         # using res to filter string and extract punctuation and symbols
         res = re.findall(r'\w+', line)
 
@@ -50,13 +46,12 @@ def count_words(n):
         words.append(key)
         freq.append(d[key])
     
-
     print(words)
     print(freq)
 
     # Creating Histogram from data
 
-    width = 1.5
+    width = 0.7
     plt.bar(words,freq, width)
     plt.xlabel('Word')
     plt.ylabel('Word Frequency')
@@ -69,7 +64,7 @@ def count_words(n):
     fontsize='small'  
 )
 
-
+    plt.tight_layout()
     plt.show()
 
     return d
@@ -77,9 +72,7 @@ def count_words(n):
 def main():
     count_words('poem.txt')
     
-
-
-
+    
 if __name__ == '__main__':
     main()
     
