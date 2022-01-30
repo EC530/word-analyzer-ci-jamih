@@ -35,14 +35,12 @@ def pdf_count_words(n):
                   "don", "should", "now"]
     res = re.findall(r'\w+', text)
 
-    
-
     for i in res:
         word = i.lower()
         print(word)
         # Check if the word is already
         # in the dictionary
-        if not word in stop_words:
+        if word not in stop_words:
                 if word in d:
                     # Increment count of word by 1
                     d[word] = d[word] + 1

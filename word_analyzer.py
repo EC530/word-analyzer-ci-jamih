@@ -4,7 +4,7 @@ import re
 
 def txt_count_words(n):
     # Function for reading words from text file
-    # And displaying word frequency in histogram 
+    # And displaying word frequency in histogram
     f = open(n, "r")
 
     # Create an empty dictionary
@@ -46,7 +46,7 @@ def txt_count_words(n):
         for word in res:
             # Check if the word is already in dictionary
             # Only put word in dictionary if not a stop word
-            if not word in stop_words:
+            if word not in stop_words:
                 if word in d:
                     # Increment count of word by 1
                     d[word] = d[word] + 1
@@ -60,8 +60,6 @@ def txt_count_words(n):
 def txt_histogram(d):
     # Create an empty array for words
     words = []
-
-
     # Create an empty array for frequency of words
     freq = []
     # Print the contents of dictionary
