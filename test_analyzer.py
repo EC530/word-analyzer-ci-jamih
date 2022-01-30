@@ -21,5 +21,5 @@ def test_word_analyzer():
 def test_pdf_analyzer():
     '''pdf_analyzer should give known result with known input'''
     result = pdf_analyzer.pdf_count_words('poem.pdf')
-    words, freq = pdf_analyzer.txt_histogram(result)
+    words, freq = pdf_analyzer.pdf_histogram(result)
     assert dict == result and w == words and f == freq
