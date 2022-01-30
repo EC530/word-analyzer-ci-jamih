@@ -86,7 +86,7 @@ def pdf_histogram(d):
 
 
 def main():
-    d = pdf_count_words()
+    d = pdf_count_words('poem.pdf')
     pdf_histogram(d)
 
 
