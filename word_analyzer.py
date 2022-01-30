@@ -60,10 +60,10 @@ def txt_histogram(d):
     plt.title('Word Frequency in poem.txt')
 
     plt.xticks(
-    rotation=45, 
-    horizontalalignment='right',
-    fontweight='light',
-    fontsize='small'  
+        rotation=45, 
+        horizontalalignment='right',
+        fontweight='light',
+        fontsize='small'  
 )
     plt.tight_layout()
     plt.show()
