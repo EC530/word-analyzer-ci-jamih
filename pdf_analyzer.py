@@ -48,17 +48,17 @@ def pdf_histogram(d):
     # Creating Histogram from data
 
     width = 0.7
-    plt.bar(words,freq, width)
+    plt.bar(words, freq, width)
     plt.xlabel('Word')
     plt.ylabel('Word Frequency')
     plt.title('Word Frequency in poem.pdf')
 
     plt.xticks(
-    rotation=45, 
-    horizontalalignment='right',
-    fontweight='light',
-    fontsize='small'  
-)
+        rotation=45,
+        horizontalalignment='right',
+        fontweight='light',
+        fontsize='small'
+    )
     plt.tight_layout()
     plt.show()
 
