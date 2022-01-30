@@ -4,17 +4,13 @@ import re
 # Function for reading words from text file
 # And displaying word frequency in histogram
 def txt_count_words(n):
-
     f = open(n, "r")
-    #print(f.read())
 
     # Create an empty dictionary
     d = dict()
 
     # Loop through each line of the file
     for line in f:
-        
-    
         # Convert the characters in line to uppercase
         # to avoid case mismatch
         line = line.upper()
