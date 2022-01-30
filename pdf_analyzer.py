@@ -2,7 +2,6 @@ import pdfplumber
 from matplotlib import pyplot as plt
 import re
 
-
 def pdf_count_words(n):
     pdf = pdfplumber.open(n)
     page = pdf.pages[0]
@@ -17,21 +16,15 @@ def pdf_count_words(n):
         word = i.upper()
         print(word)
         # Check if the word is already in dictionary
-        
         if word in d:
             # Increment count of word by 1
             d[word] = d[word] + 1
         else:
             # Add the word to dictionary with count 1
             d[word] = 1
-        
-        #print(word)
-
-    #print(text)
-    #print(type(text))
+            
     pdf.close()
     return d
-
 
 def pdf_histogram(d):
     # Create an empty array for words 
