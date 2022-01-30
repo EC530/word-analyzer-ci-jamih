@@ -14,7 +14,7 @@ def txt_count_words(n):
         # Convert the characters in line to uppercase
         # to avoid case mismatch
         line = line.upper()
-      
+
         # using res to filter string and extract punctuation and symbols
         res = re.findall(r'\w+', line)
 
@@ -27,12 +27,12 @@ def txt_count_words(n):
             else:
                 # Add the word to dictionary with count 1
                 d[word] = 1
-    
+
     return d
 
 
 def txt_histogram(d):
-    # Create an empty array for words 
+    # Create an empty array for words
     words = []
 
     # Create an empty array for frequency of words
@@ -42,24 +42,24 @@ def txt_histogram(d):
         print(key, ":", d[key])
         words.append(key)
         freq.append(d[key])
-    
+
     print(words)
     print(freq)
 
     # Creating Histogram from data
 
     width = 0.7
-    plt.bar(words,freq, width)
+    plt.bar(words, freq, width)
     plt.xlabel('Word')
     plt.ylabel('Word Frequency')
     plt.title('Word Frequency in poem.txt')
 
     plt.xticks(
-        rotation=45, 
+        rotation=45,
         horizontalalignment='right',
         fontweight='light',
-        fontsize='small'  
-)
+        fontsize='small'
+    )
     plt.tight_layout()
     plt.show()
 
