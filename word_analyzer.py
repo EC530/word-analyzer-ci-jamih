@@ -45,8 +45,6 @@ def txt_count_words(n):
         # Iterate over each word in line
         for word in res:
             # Check if the word is already in dictionary
-            print(word)
-            print(word in stop_words)
             # Only put word in dictionary if not a stop word
             if not word in stop_words:
                 if word in d:
