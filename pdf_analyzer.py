@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 import re
 
 
-def pdf_count_words():
-    pdf = pdfplumber.open('poem.pdf')
+def pdf_count_words(n):
+    pdf = pdfplumber.open(n)
     page = pdf.pages[0]
     # extracting text from pdf as a string
 
