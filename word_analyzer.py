@@ -1,9 +1,10 @@
 from matplotlib import pyplot as plt
 import re
 
-# Function for reading words from text file
-# And displaying word frequency in histogram
+
 def txt_count_words(n):
+    # Function for reading words from text file
+    # And displaying word frequency in histogram    
     f = open(n, "r")
 
     # Create an empty dictionary
