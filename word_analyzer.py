@@ -2,7 +2,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 import re
 
-
 # Function for reading words from text file
 # And displaying word frequency in histogram
 def txt_count_words(n):
@@ -12,12 +11,6 @@ def txt_count_words(n):
 
     # Create an empty dictionary
     d = dict()
-
-    # Create an empty array for words 
-    words = []
-
-    # Create an empty array for frequency of words
-    freq = []
 
     # Loop through each line of the file
     for line in f:
@@ -40,6 +33,15 @@ def txt_count_words(n):
                 # Add the word to dictionary with count 1
                 d[word] = 1
     
+    return d
+
+
+def txt_histogram(d):
+    # Create an empty array for words 
+    words = []
+
+    # Create an empty array for frequency of words
+    freq = []
     # Print the contents of dictionary
     for key in list(d.keys()):
         print(key, ":", d[key])
@@ -63,17 +65,14 @@ def txt_count_words(n):
     fontweight='light',
     fontsize='small'  
 )
-
     plt.tight_layout()
     plt.show()
 
-    return d
-
-
-
 
 def main():
-    txt_count_words('poem.txt')
+    d = txt_count_words('poem.txt')
+    txt_histogram(d)
+    
     
     
 if __name__ == '__main__':
