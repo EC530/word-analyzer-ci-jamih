@@ -88,6 +88,8 @@ def txt_histogram(d):
     plt.tight_layout()
     plt.show()
 
+    return words, freq
+
 
 def main():
     d = txt_count_words('poem.txt')

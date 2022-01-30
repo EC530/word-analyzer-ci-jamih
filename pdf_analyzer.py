@@ -83,6 +83,7 @@ def pdf_histogram(d):
     )
     plt.tight_layout()
     plt.show()
+    return words, freq
 
 
 def main():
