@@ -28,6 +28,7 @@ def pdf_count_words(n):
     pdf.close()
     return d
 
+
 def pdf_histogram(d):
     # Create an empty array for words 
     words = []
@@ -62,13 +63,10 @@ def pdf_histogram(d):
     plt.show()
 
 
-
-
 def main():
     d = pdf_count_words()
     pdf_histogram(d)
     
-    
-    
+     
 if __name__ == '__main__':
     main()
