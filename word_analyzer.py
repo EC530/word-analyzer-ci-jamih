@@ -57,7 +57,7 @@ def txt_histogram(d):
     plt.bar(words,freq, width)
     plt.xlabel('Word')
     plt.ylabel('Word Frequency')
-    plt.title('Word Frequency in Poem')
+    plt.title('Word Frequency in poem.txt')
 
     plt.xticks(
     rotation=45, 

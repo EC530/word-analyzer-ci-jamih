@@ -1,37 +1,76 @@
-import PyPDF2
 import pdfplumber
+from matplotlib import pyplot as plt
+import re
 
 
 def pdf_count_words():
-    '''
-    # creating a pdf file object
-    pdfFileObj = open('poem.pdf', 'rb')
-
-    # creating a pdf reader object
-    pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
-
-    print(pdfReader.numPages)
-
-    # creating a page object
-    pageObj = pdfReader.getPage(0)
-
-    # extracting text from page
-    print(pageObj.extractText())
-
-    # closing the pdf file object
-    pdfFileObj.close()
-    '''
-
     pdf = pdfplumber.open('poem.pdf')
     page = pdf.pages[0]
+    # extracting text from pdf as a string
+
     text = page.extract_text()
-    print(text)
-    print(type(text))
+    d = dict()
+    #res = text.split()
+    res = re.findall(r'\w+', text)
+
+    for i in res:
+        word = i.upper()
+        print(word)
+        # Check if the word is already in dictionary
+        
+        if word in d:
+            # Increment count of word by 1
+            d[word] = d[word] + 1
+        else:
+            # Add the word to dictionary with count 1
+            d[word] = 1
+        
+        #print(word)
+
+    #print(text)
+    #print(type(text))
     pdf.close()
+    return d
+
+
+def pdf_histogram(d):
+    # Create an empty array for words 
+    words = []
+
+    # Create an empty array for frequency of words
+    freq = []
+    # Print the contents of dictionary
+    for key in list(d.keys()):
+        print(key, ":", d[key])
+        words.append(key)
+        freq.append(d[key])
+    
+    print(words)
+    print(freq)
+
+    # Creating Histogram from data
+
+    width = 0.7
+    plt.bar(words,freq, width)
+    plt.xlabel('Word')
+    plt.ylabel('Word Frequency')
+    plt.title('Word Frequency in poem.pdf')
+
+    plt.xticks(
+    rotation=45, 
+    horizontalalignment='right',
+    fontweight='light',
+    fontsize='small'  
+)
+    plt.tight_layout()
+    plt.show()
+
+
 
 
 def main():
-    pdf_count_words()
+    d = pdf_count_words()
+    pdf_histogram(d)
     
     
     
