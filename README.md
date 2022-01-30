@@ -2,7 +2,7 @@
 
 # 
 
-#### Project Description
+### Project Description
 This project reads text from both a text file and PDF and displays a
 histogram depicting the words detected and the frequency of those words
 in the document. Words from NLTK's list of English stopwords are excluded
