@@ -67,10 +67,7 @@ def txt_histogram(d):
 def main():
     d = txt_count_words('poem.txt')
     txt_histogram(d)
-    
-    
-    
+
+
 if __name__ == '__main__':
     main()
-    
-
