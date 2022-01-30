@@ -2,8 +2,8 @@ import word_analyzer
 import pdf_analyzer
 
 dict = {'woods': 1, 'lovely': 1,
-        'dark': 1, 'deep': 1, 
-        'promises': 1, 'miles': 2, 'go': 2, 'sleep': 2}
+        'dark': 1, 'deep': 1, 'promises': 1,
+        'keep': 1, 'miles': 2, 'go': 2, 'sleep': 2}
 
 
 def test_word_analyzer():
