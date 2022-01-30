@@ -15,7 +15,6 @@ def test_word_analyzer():
     result = word_analyzer.txt_count_words('poem.txt')
     words, freq = word_analyzer.txt_histogram(result)
     assert dict == result and w == words and f == freq
-    
 
 
 def test_pdf_analyzer():
