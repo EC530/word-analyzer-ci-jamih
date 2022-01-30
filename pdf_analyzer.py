@@ -2,6 +2,7 @@ import pdfplumber
 from matplotlib import pyplot as plt
 import re
 
+
 def pdf_count_words(n):
     pdf = pdfplumber.open(n)
     page = pdf.pages[0]
@@ -66,7 +67,7 @@ def pdf_histogram(d):
 def main():
     d = pdf_count_words()
     pdf_histogram(d)
-    
-     
+
+
 if __name__ == '__main__':
     main()

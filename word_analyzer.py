@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-import numpy as np
 import re
 
 # Function for reading words from text file
