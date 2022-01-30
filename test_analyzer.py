@@ -5,9 +5,9 @@ dict = {'woods': 1, 'lovely': 1,
         'dark': 1, 'deep': 1, 'promises': 1,
         'keep': 1, 'miles': 2, 'go': 2, 'sleep': 2}
 
-w = {'woods', 'lovely', 'dark', 'deep', 'promises',
-     'keep', 'miles', 'go', 'sleep'}
-f = {1, 1, 1, 1, 1, 2, 2, 2}
+w = ['woods', 'lovely', 'dark', 'deep', 'promises',
+     'keep', 'miles', 'go', 'sleep']
+f = [1, 1, 1, 1, 1, 2, 2, 2]
 
 
 def test_word_analyzer():
