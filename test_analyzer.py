@@ -17,6 +17,3 @@ def test_pdf_analyzer():
     '''pdf_analyzer should give known result with known input'''
     result = pdf_analyzer.pdf_count_words('poem.pdf')
     assert dict == result
-
-
-
