@@ -7,7 +7,7 @@ dict = {'woods': 1, 'lovely': 1,
 
 w = ['woods', 'lovely', 'dark', 'deep', 'promises',
      'keep', 'miles', 'go', 'sleep']
-f = [1, 1, 1, 1, 1, 2, 2, 2]
+f = [1, 1, 1, 1, 1, 1, 2, 2, 2]
 
 
 def test_word_analyzer():
@@ -21,5 +21,5 @@ def test_word_analyzer():
 def test_pdf_analyzer():
     '''pdf_analyzer should give known result with known input'''
     result = pdf_analyzer.pdf_count_words('poem.pdf')
-    words, freq = word_analyzer.txt_histogram(result)
+    words, freq = pdf_analyzer.txt_histogram(result)
     assert dict == result and w == words and f == freq
