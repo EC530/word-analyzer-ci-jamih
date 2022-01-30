@@ -41,12 +41,12 @@ def pdf_count_words(n):
         # Check if the word is already
         # in the dictionary
         if word not in stop_words:
-                if word in d:
-                    # Increment count of word by 1
-                    d[word] = d[word] + 1
-                else:
-                    # Add the word to dictionary with count 1
-                    d[word] = 1
+            if word in d:
+                # Increment count of word by 1
+                d[word] = d[word] + 1
+            else:
+                # Add the word to dictionary with count 1
+                d[word] = 1
 
     pdf.close()
     return d
