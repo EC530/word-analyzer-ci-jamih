@@ -4,7 +4,7 @@ import re
 
 def txt_count_words(n):
     # Function for reading words from text file
-    # And displaying word frequency in histogram    
+    # And displaying word frequency in histogram 
     f = open(n, "r")
 
     # Create an empty dictionary
