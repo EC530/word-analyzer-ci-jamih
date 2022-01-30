@@ -11,20 +11,44 @@ def pdf_count_words(n):
 
     text = page.extract_text()
     d = dict()
+    # Array of NLTK English Stopwords
+    stop_words = ["i", "me", "my", "myself", "we",
+                  "our", "ours", "ourselves", "you",
+                  "your", "yours", "yourself", "yourselves",
+                  "he", "him", "his", "himself", "she", "her",
+                  "hers", "herself", "it", "its", "itself", "they",
+                  "them", "their", "theirs", "themselves", "what",
+                  "which", "who", "whom", "this", "that", "these",
+                  "those", "am", "is", "are", "was", "were", "be",
+                  "been", "being", "have", "has", "had", "having",
+                  "do", "does", "did", "doing", "a", "an", "the",
+                  "and", "but", "if", "or", "because", "as", "until",
+                  "while", "of", "at", "by", "for", "with", "about",
+                  "against", "between", "into", "through", "during",
+                  "before", "after", "above", "below", "to", "from",
+                  "up", "down", "in", "out", "on", "off", "over",
+                  "under", "again", "further", "then", "once", "here",
+                  "there", "when", "where", "why", "how", "all", "any",
+                  "both", "each", "few", "more", "most", "other", "some",
+                  "such", "no", "nor", "not", "only", "own", "same", "so",
+                  "than", "too", "very", "s", "t", "can", "will", "just",
+                  "don", "should", "now"]
     res = re.findall(r'\w+', text)
+
+    
 
     for i in res:
         word = i.upper()
         print(word)
         # Check if the word is already
         # in the dictionary
-        if word in d:
-            # Increment count of word by 1
-            d[word] = d[word] + 1
-        else:
-            # Add the word to dictionary with
-            # count 1
-            d[word] = 1
+        if not word in stop_words:
+                if word in d:
+                    # Increment count of word by 1
+                    d[word] = d[word] + 1
+                else:
+                    # Add the word to dictionary with count 1
+                    d[word] = 1
 
     pdf.close()
     return d
