@@ -15,7 +15,7 @@ def test_word_analyzer():
 
 def test_pdf_analyzer():
     '''pdf_analyzer should give known result with known input'''
-    result = pdf_analyzer.pdf_count_wo rds('poem.pdf')
+    result = pdf_analyzer.pdf_count_words('poem.pdf')
     assert dict == result
 
 
