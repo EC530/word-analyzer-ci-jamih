@@ -10,7 +10,6 @@ def pdf_count_words(n):
 
     text = page.extract_text()
     d = dict()
-    #res = text.split()
     res = re.findall(r'\w+', text)
 
     for i in res:
